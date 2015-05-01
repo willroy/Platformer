@@ -1,5 +1,6 @@
-import pygame 
+import pygame
 from pygame.locals import*
+
 pygame.display.set_caption('JustAnotherPlatformerGame') #Sets title for window
 Window = pygame.display.set_mode((800,500)) #Sets Width and height
 White = (255,255,255) #Define White
@@ -16,4 +17,4 @@ while running: #While loop
         running = False
 pygame.quit() #quits
 
-
+# Updated by ant.
