@@ -39,11 +39,10 @@ while running: #While loop
     event = pygame.event.wait()
     if event.type == pygame.QUIT: #when you click [x] it quits
         running = False
-    elif event.type == pygame.KEYDOWN:
-        man.move_right()
-        update()
     else:
         print "Event Type: %s" % event.type
+        man.update(event)
+        update()
 
 pygame.quit() #quits
 
