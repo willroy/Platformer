@@ -13,6 +13,11 @@ class Level(object):
         for sprite in self.sprites:
             self.window.blit(sprite.image, sprite.rect)
 
+    def update(self, event):
+        self.redraw()
+        for sprite in self.sprites:
+            sprite.update(event)
+
     def add_sprite(self, sprite):
         self.sprites.append(sprite)
 

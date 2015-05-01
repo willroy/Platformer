@@ -10,7 +10,7 @@ level = level.Level(Window, None)
 level.add_sprite(man)
 
 def update():
-    level.redraw()
+    level.update(event)
     pygame.display.flip()
 
 print "SUCCESS"
@@ -24,8 +24,7 @@ while running: #While loop
         running = False
     else:
         print "Event Type: %s" % event.type
-        man.update(event)
-        update()
+        update(event)
 
 pygame.quit() #quits
 
