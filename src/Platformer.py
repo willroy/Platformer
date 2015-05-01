@@ -7,10 +7,22 @@ White = (255,255,255) #Define White
 Red = (255, 0, 0) #Define Red
 Black = (0, 0, 0) #Define Black
 Green = (0, 255, 0) #Define Green
-Window.fill(Red) #Type Black, Red, Green Or White
+Box1 = pygame.Rect(20, 20, 100, 100)
+Box2 = pygame.Rect(150, 50, 100, 95)
+Box3 = pygame.Rect(350, 350, 50, 50)
+Box4 = pygame.Rect(200, 200, 150, 150)
+Box5 = pygame.Rect(400, 10, 100, 125)
+Line1 = pygame.draw.line(Black, 100, 200, 1)
+Window.fill(White) #Type Black, Red, Green Or White
+Window.fill(Red, Box1)
+Window.fill(Green, Box2)
+Window.fill(Green, Box3)
+Window.fill(Red, Box4)
+Window.fill(Black, Box5)
+WIndow.fill(Line1)
 running = True
 pygame.display.flip() #Updates the display on the window
-
+print "SUCCESS"
 while running: #While loop
     event = pygame.event.wait ()
     if event.type == pygame.QUIT: #when you click [x] it quits
@@ -18,3 +30,4 @@ while running: #While loop
 pygame.quit() #quits
 
 # Updated by ant.
+#Added Boxes
