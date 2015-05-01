@@ -7,7 +7,7 @@ White = (255,255,255) #Define White
 Red = (255, 0, 0) #Define Red
 Black = (0, 0, 0) #Define Black
 Green = (0, 255, 0) #Define Green
-Window.fill(White) #Type Black, Red, Green Or White
+Window.fill(Red) #Type Black, Red, Green Or White
 running = True
 pygame.display.flip() #Updates the display on the window
 
