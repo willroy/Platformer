@@ -10,24 +10,26 @@ Black = (0, 0, 0) #Define Black
 Green = (0, 255, 0) #Define Green
 Box1 = pygame.Rect(20, 20, 100, 100)
 
-man = man.Goblin()
-
-def update():
-    Window.fill(Red) #Type Black, Red, Green Or White
-    Window.blit(man.image, man.rect)
 Box2 = pygame.Rect(150, 50, 100, 95)
 Box3 = pygame.Rect(350, 350, 50, 50)
 Box4 = pygame.Rect(200, 200, 150, 150)
 Box5 = pygame.Rect(400, 10, 100, 125)
-Line1 = pygame.draw.line(Black, 100, 200, 1)
-Window.fill(White) #Type Black, Red, Green Or White
-Window.fill(Red, Box1)
-Window.fill(Green, Box2)
-Window.fill(Green, Box3)
-Window.fill(Red, Box4)
-Window.fill(Black, Box5)
-WIndow.fill(Line1)
+
+def background():
+    Window.fill(White) #Type Black, Red, Green Or White
+    Window.fill(Red, Box1)
+    Window.fill(Green, Box2)
+    Window.fill(Green, Box3)
+    Window.fill(Red, Box4)
+    Window.fill(Black, Box5)
+
+man = man.Goblin()
+
+def update():
+    background()
+    Window.blit(man.image, man.rect)
     pygame.display.flip() #Updates the display on the window
+
 print "SUCCESS"
 update()
 
